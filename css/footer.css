@@ -1,0 +1,29 @@
+/* Footer Styles */
+.footer {
+    font-size: 14px;
+    width: 100%;  /* Ensures the footer takes the full width of its container */
+    margin-top: 20px;
+    box-sizing: border-box;
+}        
+.sitemap-container {
+    display: flex; /* Enables flexbox layout for the container */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    gap: 20px;     /* Adds space between the flex items */
+    background: #e0e0e0;
+}
+
+.sitemap-section {
+    padding-left: 20px;
+    flex: 1; /* Allows each section to grow and fill the available space */
+    /* Each section will grow equally */
+    min-width: 200px;
+    /* Minimum width before wrapping */
+}
+.sitemap-section a {
+    color: black; /* Black text color for links */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.sitemap-section a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}

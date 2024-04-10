@@ -1,0 +1,127 @@
+/* global.css - This stylesheet applies global styles to all pages on the website */
+/* Possible fonts needed*/
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,700'); */
+/* @import url('https://fonts.googleapis.com/css?family=Brush+Script+MT|Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap'); Í*/
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+    background-color:  #f4f4f4;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    /* Adds underline to links on hover*/
+    color: #0073e6;
+    /* the color is for main body, different from header and footer*/
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.quotation_GOD {
+    font-family: "Petit Formal Script", sans-serif;
+    /* Sets a decorative font for GOD's word quotations */
+    font-size: 1.5em;
+    color: indianred;
+    /* Sets red color for GOD's word quotations */
+}
+/* The class for source of the verse*/
+.source {
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+/* Start of Default Form */
+form {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-left: 5px solid #0073e6;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 5px;
+}
+input[type="submit"] {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block; /* Make the input block level */
+    margin-left: auto; /* Left margin is auto */
+    margin-right: auto; /* Right margin is auto */
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}     
+
+
+/* Footer Styles */
+.footer {
+    font-size: 14px;
+    width: 100%;  /* Ensures the footer takes the full width of its container */
+    margin-top: 20px;
+    box-sizing: border-box;
+}        
+.sitemap-container {
+    display: flex; /* Enables flexbox layout for the container */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    gap: 20px;     /* Adds space between the flex items */
+    background: #e0e0e0;
+}
+
+.sitemap-section {
+    padding-left: 20px;
+    flex: 1; /* Allows each section to grow and fill the available space */
+    /* Each section will grow equally */
+    min-width: 200px;
+    /* Minimum width before wrapping */
+}
+.sitemap-section a {
+    color: black; /* Black text color for links */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.sitemap-section a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
