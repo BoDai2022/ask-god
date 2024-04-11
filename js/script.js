@@ -4,7 +4,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll('.navigation a');
   const currentUrl = window.location.href;
-  console.log(currentUrl);
+  // console.log(currentUrl);
   navLinks.forEach(link => {
     console.log(link.href);
     if (link.href === currentUrl) {
