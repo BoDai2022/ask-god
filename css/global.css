@@ -17,6 +17,11 @@ body {
     background-color:  #f4f4f4;
 }
 
+h1 {
+    padding-left: 10px;
+    font-size: 28px;
+    color: #333;
+}
 h2 {
     font-size: 24px;
     color: #333;
@@ -94,7 +99,114 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #0056b3;
 }     
+/* Header Styles */
+.header-container {
+    display: flex;
+    /*flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    padding: 10px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    /*background-color: #fff; /* sets a background color for the header */
+}
 
+.logo {
+    flex-grow: 0;
+    white-space: nowrap;
+    max-width: 35%; 
+    display: flex; /* Ensures the logo is properly aligned */
+    align-items: center; /* Center the logo vertically */
+}
+
+.logo img {
+    height:45px; /* Adjust the size of your logo */
+}
+
+.search-bar {
+    flex-grow: 8;
+    max-width: 70%;
+    margin: 0 3em 0;
+    display: flex; /* Ensures that the input and button are aligned */
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    margin-left: 1em;
+    padding-left: 45px;
+    font-size: 1.25em;
+    background: url('../images/search.png') no-repeat 5px center transparent;
+    background-size: 35px;
+    line-height: 45px; 
+    /* background: transparent; */
+    border: 2px solid #333;
+    border-radius: 20px;
+    color: #333;
+
+}
+
+.navigation {
+    display: flex; /* This will activate flexbox layout for the navigation bar */
+    flex-grow: 0;
+    justify-content: center; /* This centers the navigation items horizontally */
+    align-items: center; /* This centers the navigation items vertically */
+}
+
+/* Styles for screens with width less than 768px */
+
+
+.navigation ul {
+    display: flex; /* Enables flexbox for the list, laying out the child elements in a row */
+    list-style-type: none; /* Removes bullet points from the list */
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li {
+    margin: 0 5px; /* Adds some horizontal spacing between the navigation items */
+}
+
+.navigation ul li a {
+    color: black;
+    padding: 5px 10px;
+}
+
+.navigation ul li a:hover {
+    color: #333;
+}
+
+.navigation ul li a.active {
+    background-color: #808080; /* Sets a blue background for the active link */
+    color: white; /* Sets the text color to white for better visibility */
+    padding: 5px 10px; /* Adds some padding for a better visual appearance */
+    border-radius: 5px; /* Optional: rounds the corners for a smoother look */
+}
+
+/* Styles for screens with width less than 768px */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center; /* Adjust alignment as needed */
+    }
+
+    .logo, .search-bar, .navigation{
+        width: 100%; /* Take full width to ensure they stack */
+    }
+
+    /* Maintain the navigation style */
+    .navigation ul {
+        display: flex; /* Keep the horizontal layout */
+        justify-content: center; /* Center the items if needed */
+        padding: 1em;
+    }
+}
+
+/* center*/
+.center{
+    display: flex;
+    justify-content: center;
+}
 
 /* Footer Styles */
 .footer {
@@ -106,7 +218,7 @@ input[type="submit"]:hover {
 .sitemap-container {
     display: flex; /* Enables flexbox layout for the container */
     flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
-    gap: 20px;     /* Adds space between the flex items */
+    gap: 2em;     /* Adds space between the flex items */
     background: #e0e0e0;
 }
 
@@ -122,6 +234,6 @@ input[type="submit"]:hover {
     text-decoration: none; /* Removes underline from links */
 }
 
-.sitemap-section a:hover {
+a:hover {
     text-decoration: underline; /* Adds underline on hover */
 }

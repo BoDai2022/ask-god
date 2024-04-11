@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ASK GOD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a><img src="images/ASK-GOD.png" alt="Ask God"></a>
+                <h1>ASK GOD</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" name="q" placeholder="Search Questions...">
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="seek.html">Seek</a></li>
+                    <li><a href="ask.html">Ask</a></li>
+                    <li><a href="pastors.html">Pastors</a></li>
+                    <!-- <li><a href="feedback.html">Give Feedback</a></li> -->
+                    <li><a href="about.html">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="center"><h1>Avaliable Pastors</h1></div>
+        <!--The pastors' gallery-->
+        <div class="gallery">
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/Apostel_philippus.jpg" alt="Philip is a figure who bridges cultural and religious boundaries, exemplified by his interactions with the Ethiopian eunuch and others throughout his ministry."/>
+                <div class="img-description">
+                    <h3>Apostle Philip</h3>
+                </div>            
+            </div>
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/Apostel_thomas.jpg" alt="Apostle Thomas is a prominent figure in the New Testament, symbolizing faith and doubt within Christian theology, and is credited with spreading Christianity to parts of India"/>
+                <div class="img-description">
+                    <h3>Apostle Thomas</h3>
+                </div>   
+            </div>
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/Apostle_andrea.jpg" alt="Apostle Andrew's missionary work is mainly in regions around the Black Sea and Greece"/>
+                <div class="img-description">
+                    <h3>Apostle Andrew</h3>
+                </div>   
+            </div>
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/Apostle_bartolomeus.jpg" alt="Apostle Bartholomew's missionary work is in Armenia"/>
+                <div class="img-description">
+                    <h3>Apostle Bartholomew</h3>
+                </div>  
+            </div>
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/Apostle_jakobus.jpg" alt="Apostle James He is identified as James, the son of Alphaeus, and his humility and devotion are exemplars of Christian discipleship, reflecting a life of deep commitment to our Lord"/>
+                <div class="img-description">
+                    <h3>Apostle James the Lesser</h3>
+                </div>  
+            </div>
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/Apostle_johannes.jpg" alt="Apostle John's emphasis on love and the divine nature of Christ deeply informs our faith and encourages a heartfelt commitment to following Jesus."/>
+                <div class="img-description">
+                    <h3>Apostle John</h3>
+                </div>  
+            </div>
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/Apostle_Judas_Thaddaus.jpg" alt="Apostle Thaddaeus' epistle in the New Testament emphasizes the importance of maintaining faith in the midst of adversity and contending earnestly for the faith once delivered to the saints, highlighting his dedication to the teachings and spread of the Gospel"/>
+                <div class="img-description">
+                    <h3>Apostle Thaddaeus</h3>
+                </div> 
+            </div>
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/Apostle_mattheus.jpg" alt="Apostle Matthew's Gospel, a cornerstone of the New Testament, offers a unique perspective on Jesus' life and teachings, emphasizing Jesus' role as the fulfillment of Old Testament prophecies and his profound connection to the Jewish tradition."/>
+                <div class="img-description">
+                    <h3>Apostle Matthew</h3>
+                </div>                 
+            </div>
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/Apostle_Peter.jpg" alt="Apostle Peter's journey from a humble fisherman to a foundational figure in Christianity exemplifies transformative faith and divine purpose, guiding believers in their spiritual journeys"/>
+                <div class="img-description">
+                    <h3>Apostle Peter</h3>
+                </div>  
+            </div>     
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/Apostle_simon.jpg" alt="Apostle Simon's transition from zealotry to a disciple of peace and love underscores the transformative power of Jesus' message and the universal scope of His mission"/>
+                <div class="img-description">
+                    <h3>Apostle Simon</h3>
+                </div>  
+            </div>       
+            <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/James_the_Apostle.jpg" alt="Apostle James The Greater's martyrdom, as the first apostle to be martyred, marks a significant testament to the strength and conviction of early Christian witness"/>
+                <div class="img-description">
+                    <h3>Apostle James The Greater</h3>
+                </div> 
+            </div>         
+            <!-- <div class="img-wrap" onclick="openModal(this)">
+                <img src="images/pastors/The-Last-Supper.jpg" alt="Apostle Judas"/>
+                <div class="img-description">
+                    <h3>Apostle Judas</h3>
+                </div>  
+            </div>                              -->
+        </div>
+        <!-- Modal for displaying clicked image -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="sitemap-container">
+            <div class="sitemap-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="about.html">Introduction</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-section">
+                <h3>Actions</h3>
+                <ul>
+                    <li><a href="#">Popular Questions</a></li>
+                    <li><a href="#">Ask a Question</a></li>
+                    <li><a href="feedback.html">Give Feedback</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-section">
+                <h3>Other Resources</h3>
+                <ul>
+                    <li><a href="assignment.html">assignment.html</a></li>
+                    <li><a href="source_log.html">Source Log</a></li>
+                    <li><a href="#">Coming soon</a></li>
+                    <li><a href="#">Coming soon</a></li>
+                    <li><a href="#">Coming soon</a></li>
+                    <li><a href="#">Coming soon</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
