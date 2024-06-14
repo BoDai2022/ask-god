@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Question Detail</title>
+    <meta charset="utf-8">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/global_dark.css">
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            function getQuestionId() {
+                const params = new URLSearchParams(window.location.search);
+                return params.get('id'); // Assumes URL like ?id=123
+            }
+
+            function fetchQuestionData(questionId) {
+                console.log(questions)
+                // Search for the question by ID
+                return questions.find(q => q.id == questionId);
+            }
+
+            function displayQuestion(questionData) {
+                if (!questionData) {
+                    document.querySelector('main').innerHTML = '<div class="center"><h1>Question not found</h1></div>';
+                    return;
+                }
+                document.querySelector('.question-detail-container h2').textContent = questionData.title;
+                document.querySelector('.question-text').textContent = questionData.content;
+                document.querySelector('.asked-time').textContent = 'Asked: ' + questionData.askedTime;
+                document.querySelector('.answered-time').textContent = 'Answered: ' + questionData.updatedTime;
+                document.querySelector('.answer-section .answer-text').textContent = questionData.answerText;
+                document.querySelector('.responder-info img').src = questionData.imgSrc;
+                document.querySelector('.responder-info img').alt = 'Photo of ' + questionData.responderName;
+                document.querySelector('.responder-info .responder-name').textContent = questionData.responderName;
+
+            }
+
+            const questionId = getQuestionId();
+            const questionData = fetchQuestionData(questionId);
+            displayQuestion(questionData);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="video-background">
+        <video playsinline autoplay muted loop>
+            <source src="video/dark_background.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a><img src="images/ASK-GOD.png" alt="Ask God"></a>
+                <h1>ASK GOD</h1>
+            </div>
+            <div class="search-bar">
+                <input id="searchInput" type="text" name="q" placeholder="Search Questions..."
+                    oninput="handleInputChange()" onkeypress="handleKeyPress(event)">
+                <div id="searchResults"></div>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Seek</a></li>
+                    <li><a class="action" href="ask.html">Ask</a></li>
+                    <li><a href="pastors.html">Pastors</a></li>
+                    <!-- <li><a href="feedback.html">Give Feedback</a></li> -->
+                    <li><a href="about.html">About us</a></li>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-switcher">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="center">
+            <h1>Question</h1>
+        </div>
+        <div class="question-detail-container">
+            <h2>What is the meaning of life?</h2>
+            <p class="question-text">I've always wondered about this and would love to get some insights from different
+                perspectives.</p>
+            <div class="question-meta">
+                <span class="asked-time">Asked: January 1, 2024</span>
+                <span class="answered-time">Answered: January 2, 2024</span>
+            </div>
+
+            <div class="answer-section">
+                <h2>Answer</h2>
+                <p class="answer-text">The meaning of life varies from person to person and culture to culture. Most
+                    philosophies and religions frame it in terms of finding your purpose or playing your role in the
+                    cosmos or society.</p>
+                <div class="responder-info">
+                    <img src="images/pastors/Apostle_Peter.jpg" alt="Apostle Peter" class="responder-photo">
+                    <span class="responder-name">Pastor, Apostle Peter</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="sitemap-container">
+            <div class="sitemap-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="about.html">Introduction</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-section">
+                <h3>Actions</h3>
+                <ul>
+                    <li><a href="index.html">Popular Questions</a></li>
+                    <li><a class="action" href="ask.html">Ask</a></li>
+                    <li><a href="feedback.html">Give Feedback</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-section">
+                <h3>Other Resources</h3>
+                <ul>
+                    <li><a href="assignment.html">assignment.html</a></li>
+                    <li><a href="source_log.html">Source Log</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                    <li><a href="color_game.html">Color Game</a></li>
+                    <li><a href="social_media_feed.html">Social Media Feeds</a></li>
+                    <li><a href="code_validation.html">Code Validation</a></li>
+                    <li><a href="reflection.html">Reflection</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

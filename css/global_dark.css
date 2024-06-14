@@ -1,0 +1,110 @@
+/***************************************
+    Global Dark Mode Styles when .dark-mode is added to the body
+ ***************************************/
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode ul li a {
+    color: #e0e0e0; /* Light color for links in the header */
+}
+body.dark-mode ul li a:hover {
+    color: #c0c0c0; /* Slightly darker color on hover for better interaction feedback */
+    text-decoration: underline; /* Optional: add underline on hover */
+}
+
+body.dark-mode ul li a.active {
+    background-color: #555; /* Darker background for active link */
+    color: #fff; /* White text for active link */
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode label,
+body.dark-mode .question-detail-container{
+    color: #c0c0c0; /* Light color for text */
+    background-color: #1e1e1e;
+}
+body.dark-mode .question-text{
+    color: #c0c0c0; /* Light color for text */
+}
+body.dark-mode .answer-text{
+    color: #c0c0c0; /* Light color for text */
+    background-color: #1e1e1e;
+}
+body.dark-mode .responder-name{
+    color: #c0c0c0; /* Light color for text */
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .header-container {
+    color: #fff; /* Light color for general text in the header */
+    /* background-color: #1e1e1e; */
+}
+body.dark-mode .log-entry {
+    color: #c0c0c0; /* Light color for general text in the header */
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .footer {
+    /* background-color: #1e1e1e; */
+    opacity: 0.4;
+}
+
+body.dark-mode .question-item,
+body.dark-mode form {
+    background-color: #333;
+    color: #ccc;
+}
+
+body.dark-mode input[type="text"], 
+body.dark-mode textarea {
+    background-color: #333;
+    color: #ddd;
+    border-color: #555;
+}
+
+body.dark-mode #searchResults {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+
+body.dark-mode main {
+    background: #2a2a2a;
+    opacity: 0.8;
+}
+body.dark-mode .sitemap-container {
+    background: #2a2a2a;
+}
+/* Video background */
+.video-background {
+    position: fixed; /* Fixed position to cover the whole screen */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100; /* Keep the video behind other elements */
+}
+
+video {
+    display: none;
+    /* Cover the container completely while keeping aspect ratio */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -webkit-filter: brightness(50%); /* Darkening the video */
+    filter: brightness(100%);
+}
+
+/* Dark mode media query */
+body.dark-mode video{
+    display: block; /* Show the video in dark mode */
+}
+

@@ -1,0 +1,545 @@
+/* global.css - This stylesheet applies global styles to all pages on the website */
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+/*********************************
+ General body styles
+ *********************************/
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+    background-color:  #f4f4f4;
+}
+
+h1 {
+    padding-left: 10px;
+    font-size: 28px;
+    color: #333;
+}
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+a {
+    color: #0073e6;
+}
+ul li a {
+    text-decoration: none;
+    /* Adds underline to links on hover*/
+    color: #0073e6;
+    /* the color is for main body, different from header and footer*/
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.quotation_GOD {
+    font-family: "Petit Formal Script", sans-serif;
+    /* Sets a decorative font for GOD's word quotations */
+    font-size: 1.5em;
+    color: indianred;
+    /* Sets red color for GOD's word quotations */
+}
+/* The class for source of the verse*/
+.source {
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+/*********************************
+  Default Form styles
+ *********************************/
+form {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-left: 5px solid #0073e6;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    display: block; /* Makes the label take the full width */
+    margin-bottom: 8px;
+    color: #333; /* Dark grey color for text */
+    font-size: 18px; /* Sufficient size for readability */
+}
+
+/* Input and Textarea styling */
+input[type="text"], textarea {
+    width: 100%; /* Full width to fill the form */
+    padding: 10px; /* Padding inside the fields */
+    margin-bottom: 20px; /* Space below each field */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners for a softer look */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    font-size: 16px; /* Matching font size for uniformity */
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #0073e6; /* Highlight color when focused */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow inside the field on focus */
+    outline: none; /* Removes the default focus outline */
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 2em; /* Spacing between buttons */
+}
+
+input[type="submit"], input[type="reset"] {
+    width: 150px; /* Fixed width for each button */
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Large enough for readability */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="submit"] {
+    background-color: #0073e6;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+input[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+input[type="reset"]:hover {
+    background-color: #bbb;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/***************************************
+    Header Styles
+***************************************/
+
+.header-container {
+    display: flex;
+    /*flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    align-items: center;
+    justify-content: space-between;
+    color: #808080;
+    padding: 10px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    /*background-color: #fff; /* sets a background color for the header */
+}
+
+.logo {
+    flex-grow: 0;
+    white-space: nowrap;
+    max-width: 35%; 
+    display: flex; /* Ensures the logo is properly aligned */
+    align-items: center; /* Center the logo vertically */
+}
+
+.logo img {
+    height:45px; /* Adjust the size of your logo */
+}
+
+.search-bar {
+    position: relative;
+    flex-grow: 8;
+    max-width: 70%;
+    margin: 0 3em 0;
+    display: flex; /* Ensures that the input and button are aligned */
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    /* margin-left: 1em; */
+    padding-left: 45px;
+    font-size: 1.25em;
+    background: url('../images/search.png') no-repeat 5px center transparent;
+    background-size: 35px;
+    line-height: 45px; 
+    /* background: transparent; */
+    border: 2px solid #333;
+    border-radius: 20px;
+    color: #333;
+
+}
+#searchResults {
+    position: absolute;
+    top: 100%; /* Align just below the search bar */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 5; /* Make sure it's above other content but check z-index usage on your site */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    display: none; /* Initially hide the dropdown */
+    padding: 0;
+    box-sizing: border-box;
+}
+.navigation {
+    display: flex; /* This will activate flexbox layout for the navigation bar */
+    flex-grow: 0;
+    justify-content: center; /* This centers the navigation items horizontally */
+    align-items: center; /* This centers the navigation items vertically */
+}
+
+.navigation ul {
+    display: flex; /* Enables flexbox for the list, laying out the child elements in a row */
+    list-style-type: none; /* Removes bullet points from the list */
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li {
+    margin: 0 5px; /* Adds some horizontal spacing between the navigation items */
+}
+
+.navigation ul li a {
+    color: black;
+    padding: 5px 10px;
+}
+.navigation ul li .action {
+    color: #0073e6;
+    padding: 5px 10px;
+}
+.navigation ul li a:hover {
+    color: #333;
+}
+
+.navigation ul li a.active {
+    background-color: #808080; /* Sets a blue background for the active link */
+    color: white; /* Sets the text color to white for better visibility */
+    padding: 5px 10px; /* Adds some padding for a better visual appearance */
+    border-radius: 5px; /* Optional: rounds the corners for a smoother look */
+}
+
+/***************************************
+    Styles for screens with width less than 768px, rearrange the header in small screens
+***************************************/
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center; /* Adjust alignment as needed */
+    }
+
+    .logo, .search-bar, .navigation{
+        width: 100%; /* Take full width to ensure they stack */
+    }
+
+    /* Maintain the navigation style */
+    .navigation ul {
+        display: flex; /* Keep the horizontal layout */
+        justify-content: center; /* Center the items if needed */
+        padding: 1em;
+    }
+}
+
+/* main style */
+main{
+    margin-top: 2em;
+    background-color: #f9f9f9;
+    /* padding: 1em; */
+}
+/* center*/
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+/***************************************
+  Question list styles
+***************************************/
+.questions-container {
+    display: grid;
+    gap: 20px;
+    overflow: auto;
+}
+.question-header {
+    display: grid;
+    grid-template-columns: 60px 5fr 0.5fr 0.5fr 0.5fr 0.25fr 0.25fr 0.5fr; /* Adjusted for seven columns */
+    font-size: 18px;
+    text-align: center;
+    padding: 12px 1em 12px 1em;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #333;
+    gap: 1em;
+}
+
+.question-item {
+    display: grid;
+    grid-template-columns: 60px 5fr 0.5fr 0.5fr 0.5fr 0.25fr 0.25fr 0.5fr; /* Adjusted for seven columns */
+    align-items: center;
+    background-color: #f9f9f9;
+    /* margin-top: 1em; */
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    gap: 1em;
+}
+
+.responder-photo {
+    margin: 1em;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.question-details {
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+.question-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.asked-time, .updated-time {
+    padding: 0 10px;
+}
+
+.likes-count, .dislikes-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.question-status {
+    font-weight: bold;
+    /* color: green; */
+    padding-right: 10px;
+}
+/***************************************
+  Footer Styles
+***************************************/
+
+.footer {
+    font-size: 14px;
+    width: 100%;  /* Ensures the footer takes the full width of its container */
+    margin-top: 20px;
+    box-sizing: border-box;
+}        
+.sitemap-container {
+    display: flex; /* Enables flexbox layout for the container */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    gap: 2em;     /* Adds space between the flex items */
+    background: #e0e0e0;
+}
+
+.sitemap-section {
+    padding-left: 20px;
+    flex: 1; /* Allows each section to grow and fill the available space */
+    /* Each section will grow equally */
+    min-width: 200px;
+    /* Minimum width before wrapping */
+}
+.sitemap-section a {
+    color: black; /* Black text color for links */
+    text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+
+/***************************************
+  Styling for the search results container
+***************************************/
+#searchResults {
+    position: absolute;
+    top: 100%; /* Place directly below the input field */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius:20px; /* Rounded bottom corners */
+    border-top: none;
+    z-index: 5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    display: none; /* Initially hidden */
+    box-sizing: border-box;
+}
+
+/* Each result entry styling */
+#searchResults div {
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee; /* Subtle separator for each result */
+    cursor: pointer; /* Indicates that an item is clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for result entries */
+#searchResults div:hover {
+    background-color: #e0e0e0;
+}
+
+/* Title styling in the results */
+#searchResults h4 {
+    margin: 0;
+    color: #333; /* Dark color for better readability */
+    font-size: 1.1em; /* Slightly larger font size for titles */
+}
+
+/* Content styling in the results */
+#searchResults p {
+    margin: 5px 0 0; /* Small margin to separate title from content */
+    color: #666; /* Lighter color for content */
+    font-size: 0.9em; /* Smaller font size for content */
+    line-height: 1.4; /* Improved line spacing for readability */
+}
+
+/***************************************
+    Pagination styles
+ ***************************************/
+.pagination-container {
+    display: flex; /* Aligns the pagination links in a row */
+    justify-content: right; /* Centers the pagination links */
+    padding: 10px 0; /* Padding inside the pagination container */
+    list-style: none; /* Removes list style since it's often styled as a list */
+}
+
+.pagination-link {
+    margin: 0 5px; /* Space between links */
+    padding: 5px 10px; /* Padding inside each link for a better click area */
+    text-decoration: none; /* No underline */
+    color: #808080; /* Matching your existing link color */
+    border: 1px solid #808080; /* Adds a border with the same color as the text */
+    border-radius: 5px; /* Rounded corners for the links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.pagination-link:hover, .pagination-link.active {
+    background-color: #808080; /* Blue background on hover and for active link */
+    color: white; /* White text on hover and for active link */
+}
+
+.pagination-link.active {
+    font-weight: bold; /* Makes the active link bold */
+}
+
+
+/***************************************
+    question detail styles
+ ***************************************/
+.question-detail-container {
+    padding: 1em;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.question-text {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.question-meta {
+    font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+
+.answer-text {
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+}
+
+.responder-info {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.responder-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.responder-name {
+    font-size: 16px;
+    color: #333;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+  }
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    transition: .4s;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: #333;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+  
+/* Adding focus styles on the slider handle */
+input:focus + .slider {
+    box-shadow: 0 0 1px #333;
+}
