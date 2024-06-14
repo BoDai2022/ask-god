@@ -6,7 +6,7 @@ This website is an assignment of a web development course at ANU.
 It includes features like question searching, question asking, color game, an so on.
 It only consists of frontend code with pure html, css, and javascript, so it's static, the data will not be stored in a database.
 
-########################################################################################
+####################################################
 
 Why ASK GOD?
 "For everyone who asks receives; the one who seeks finds; and to the one who knocks, the door will be opened" (Matthew 7:8 NIV).
