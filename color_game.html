@@ -2,11 +2,22 @@
 <html lang="en">
 
 <head>
-    <title>Sitemap</title>
-    <meta charset="utf-8">
+    <title>Color Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/global.css">
     <link rel="stylesheet" type="text/css" href="css/global_dark.css">
     <script src="js/script.js"></script>
+    <script src="js/color_game.js"></script>
+    <style>
+        canvas{
+            background: #ccc;
+            margin: 10px 0 50px 0;
+        }
+        button{
+            height: 2em;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,6 +55,23 @@
             </nav>
         </div>
     </header>
+    <main>
+        <div class="center">
+            <h1>Color Game - JESUS' BIRTH AND CHILDHOOD</h1>
+        </div>
+        <div id="toolbar" class="form-buttons">
+            <input type="color" id="colorPicker" value="#000000">
+            <label for="brushSize">Brush Size:</label>
+            <input type="range" id="brushSize" min="1" max="50" value="5">
+            <button id="undoButton">Undo</button>
+            <button id="redoButton">Redo</button>
+            <button id="changeButton">Try another</button>
+            <button id="downloadButton">Download</button>
+        </div>
+        <div id="paint_div" class="center">
+            <canvas id="paintCanvas" width="960" height="540"></canvas>
+        </div>
+    </main>
     <footer class="footer">
         <div class="sitemap-container">
             <div class="sitemap-section">

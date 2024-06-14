@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Feedback Form</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/global.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/global_dark.css">
     <script src="js/script.js"></script>
 </head>
 
 <body>
+    <div class="video-background">
+        <video playsinline autoplay muted loop>
+            <source src="video/dark_background.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
     <header>
         <div class="header-container">
             <div class="logo">
@@ -27,6 +35,12 @@
                     <li><a href="pastors.html">Pastors</a></li>
                     <!-- <li><a href="feedback.html">Give Feedback</a></li> -->
                     <li><a href="about.html">About us</a></li>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-switcher">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -35,7 +49,7 @@
         <div class="center">
             <h1>User Feedback Form</h1>
         </div>
-        <form form method="post" action="mailto:u7544620@anu.edu.au?subject=assignment1 feedback" enctype="text/plain">
+        <form method="post" action="mailto:u7544620@anu.edu.au?subject=assignment1_feedback" enctype="text/plain">
             <div class="question">
                 <p>Are you interested in Christianity?</p>
                 <div class="radio-group">
@@ -85,7 +99,7 @@
                 <textarea name="suggestions" rows="4" cols="50"></textarea>
             </div>
             <div class="form-buttons">
-                <input type="submit" value="Send Feedback"></input>
+                <input type="submit" value="Send Feedback">
             </div>
         </form>
     </main>
@@ -103,6 +117,7 @@
                     <li><a href="index.html">Popular Questions</a></li>
                     <li><a href="ask.html">Ask a Question</a></li>
                     <li><a href="feedback.html">Give Feedback</a></li>
+                    <li><a href="color_game.html">Color Game</a></li>
                 </ul>
             </div>
             <div class="sitemap-section">
@@ -111,9 +126,9 @@
                     <li><a href="assignment.html">assignment.html</a></li>
                     <li><a href="source_log.html">Source Log</a></li>
                     <li><a href="sitemap.html">Site Map</a></li>
-                    <li><a href="#">Coming soon</a></li>
-                    <li><a href="#">Coming soon</a></li>
-                    <li><a href="#">Coming soon</a></li>
+                    <li><a href="social_media_feed.html">Social Media Feeds</a></li>
+                    <li><a href="code_validation.html">Code Validation</a></li>
+                    <li><a href="reflection.html">Reflection</a></li>
                 </ul>
             </div>
         </div>

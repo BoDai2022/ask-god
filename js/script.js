@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const themeSwitcher = document.getElementById('theme-switcher');
+
+  // Check the saved theme from localStorage and update the checkbox
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      themeSwitcher.checked = true;
+  }
+  console.log(currentTheme)
+  console.log(window.matchMedia('(prefers-color-scheme: dark)').matches);
+  themeSwitcher.addEventListener('change', function () {
+      document.body.classList.toggle('dark-mode', this.checked);
+      // Save the current theme preference to localStorage
+      localStorage.setItem('theme', this.checked ? 'dark' : 'light');
+  });
   /**
    * Let the Navi bar show which page the user is visitiong
    */
