@@ -1,15 +1,16 @@
-# Ask-god
+# Ask God
 
 A QA website focus on bibical questions, aims to help building connections between people and pastors
 
 This website is an assignment of a web development course at ANU.
 It includes features like question searching, question asking, color game, an so on.
 It only consists of frontend code with pure html, css, and javascript, so it's static, the data will not be stored in a database.
+[It's now available here](https://stuweb.cecs.anu.edu.au/~u7544620/index.html)
 
-## homepage
+## Homepage
 ![homepage](images/home_screenshot.gif)
 
-####################################################
+## Introduction
 
 Why ASK GOD?
 "For everyone who asks receives; the one who seeks finds; and to the one who knocks, the door will be opened" (Matthew 7:8 NIV).
