@@ -6,6 +6,9 @@ This website is an assignment of a web development course at ANU.
 It includes features like question searching, question asking, color game, an so on.
 It only consists of frontend code with pure html, css, and javascript, so it's static, the data will not be stored in a database.
 
+## homepage
+![homepage](images/home_screenshot.gif)
+
 ####################################################
 
 Why ASK GOD?
